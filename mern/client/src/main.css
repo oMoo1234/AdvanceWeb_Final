@@ -1,0 +1,14 @@
+.list{
+    font-size: 40px;
+}
+#input{
+    font-size: 30px;
+    height: 50px;
+
+}
+#addbutton{
+    height: 60px;
+    font-size: 30px;
+    color: white;
+    background-color: blue;
+}

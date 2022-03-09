@@ -1,4 +1,5 @@
 import React from "react";
+import '../main.css';
 
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
@@ -29,8 +30,8 @@ export default function Navbar() {
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
          <ul className="navbar-nav ml-auto">
            <li className="nav-item">
-             <NavLink className="nav-link" to="/create">
-               Create Record
+             <NavLink className="nav-link btn btn-warning" to="/create">
+               <h2>Create User</h2>
              </NavLink>
            </li>
          </ul>
