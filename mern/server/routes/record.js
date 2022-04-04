@@ -42,7 +42,7 @@ recordRoutes.route("/record/add").post( function (req, response) {
   let myobj = {
     name: req.body.name,
     position: req.body.position,
-    // level: req.body.level,
+
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;

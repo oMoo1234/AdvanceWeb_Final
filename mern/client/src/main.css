@@ -19,3 +19,36 @@
 .head{
     font-size: 40px;
 }
+.question-title{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid;
+    border-color: brown;
+    text-align: center;
+    background-color: lightcoral;
+}
+.input{
+height: 400px;
+width: 100%;
+font-size: 30px;
+
+}
+.question-div{
+
+    /* background-color: lightcyan; */
+}
+.question-form{
+    margin: auto;
+
+    width: 50%;
+}
+.questions-asked{
+    height: 400px;
+    border: 8px solid;
+    border-color: brown;
+    text-align: center;
+
+}

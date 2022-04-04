@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import '../main.css';
 
 const Record = (props) => (
  <tr>
@@ -78,6 +79,7 @@ export default function RecordList() {
        </thead>
        <tbody>{recordList()}</tbody>
      </table>
+     <Link to="/">Ask question</Link>
    </div>
  );
 }
