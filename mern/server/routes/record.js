@@ -23,6 +23,7 @@ recordRoutes.route("/record").get(function (req, res) {
       res.json(result);
     });
 });
+//get all questions
 
 // This section will help you get a single record by id
 recordRoutes.route("/record/:id").get(function (req, res) {
@@ -41,7 +42,7 @@ recordRoutes.route("/record/add").post( function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
     name: req.body.name,
-    position: req.body.position,
+    password: req.body.password,
 
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
@@ -49,6 +50,7 @@ recordRoutes.route("/record/add").post( function (req, response) {
     response.json(res);
   });
 });
+// create a new question
 
 // This section will help you update a record by id.
 recordRoutes.route("/update/:id").post(function (req, response) {
@@ -57,8 +59,8 @@ recordRoutes.route("/update/:id").post(function (req, response) {
   let newvalues = {
     $set: {
       name: req.body.name,
-      position: req.body.position,
-      // level: req.body.level,
+      password: req.body.password,
+
     },
   };
   db_connect

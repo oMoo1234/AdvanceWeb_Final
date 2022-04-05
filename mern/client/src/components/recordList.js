@@ -5,7 +5,7 @@ import '../main.css';
 const Record = (props) => (
  <tr>
    <td>{props.record.name}</td>
-   <td>{props.record.position}</td>
+   <td>{props.record.password}</td>
    <td>
      <Link className="btn btn-link" to={`/edit/${props.record._id}`}><h3>Edit</h3></Link> |
      <button className="btn btn-link"

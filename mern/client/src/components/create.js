@@ -4,8 +4,8 @@ import '../main.css';
 export default function Create() {
  const [form, setForm] = useState({
    name: "",
-   position: "",
-   level: "",
+   password: "",
+
  });
  const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ export default function Create() {
      return;
    });
 
-   setForm({ name: "", position: "", level: "" });
+   setForm({ name: "", password: ""});
    navigate("/");
  }
 
@@ -62,8 +62,8 @@ export default function Create() {
          <label >Password</label>
          <input id="input" type="text" className="form-control"
 
-           value={form.position}
-           onChange={(e) => updateForm({ position: e.target.value })}
+           value={form.password}
+           onChange={(e) => updateForm({ password: e.target.value })}
          >
            </input>
        </div>
