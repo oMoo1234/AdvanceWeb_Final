@@ -40,7 +40,7 @@ export default function Create() {
    });
 
    setForm({ name: "", password: ""});
-   navigate("/");
+   navigate("/list");
  }
 
  // This following section will display the form that takes the input from the user.

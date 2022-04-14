@@ -31,7 +31,7 @@ export default function Question() {
       return;
     });
     setForm({ question: "", likes:""});
-    navigate("/");
+    navigate("/asked_questions");
   }
 
   return (
@@ -52,8 +52,6 @@ export default function Question() {
         </form>
         </div>
         <div className='questions-asked'>
-          <Link to="/asked_questions">Previously Asked Question(s)</Link>
-
         </div>
     </div>
 

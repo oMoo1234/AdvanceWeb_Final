@@ -33,6 +33,18 @@ export default function Navbar() {
              <NavLink className="nav-link btn btn-warning" to="/create">
                <h2>Create User</h2>
              </NavLink>
+             <br></br>
+             <NavLink className="nav-link btn btn-warning" to="/">
+               <h2>Ask a Question</h2>
+             </NavLink>
+             <br></br>
+             <NavLink className="nav-link btn btn-warning" to="/asked_questions">
+               <h2>List of Question(s)</h2>
+             </NavLink>
+             <br></br>
+             <NavLink className="nav-link btn btn-warning" to="/list">
+               <h2>List of Users</h2>
+             </NavLink>
            </li>
          </ul>
        </div>

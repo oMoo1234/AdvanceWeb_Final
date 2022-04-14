@@ -79,7 +79,7 @@ export default function RecordList() {
        </thead>
        <tbody>{recordList()}</tbody>
      </table>
-     <Link to="/">Ask question</Link>
+
    </div>
  );
 }

@@ -28,7 +28,7 @@ export default function GetQuestions() {
     })}
     </div>
     <div className='questions-asked'>
-    <Link  to="/"> Ask a Question </Link>
+
     </div>
     </div>
   )
