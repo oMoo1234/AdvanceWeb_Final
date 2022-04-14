@@ -9,6 +9,9 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import Question from "./components/question";
+import AskedQuestions from "./components/askedquestions";
+
+
 
 
 
@@ -21,6 +24,8 @@ const App = () => {
        <Route path="/edit/:id" element={<Edit />} />
        <Route path="/create" element={<Create />} />
        <Route path="/" element={<Question />} />
+       <Route path="/asked_questions" element={<AskedQuestions />} />
+
      </Routes>
    </div>
  );

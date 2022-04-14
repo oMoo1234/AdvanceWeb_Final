@@ -1,17 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../main.css';
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 
 export default function Question() {
-  const [form, setForm] = useState({
-    question: "",
-    likes: "",
-  });
+  const [form, setForm] = useState([]
+   );
+
  const navigate = useNavigate();
-
-
-
   function updateForm(value) {
     return setForm((prev) => {
       return { ...prev, ...value };
@@ -20,46 +17,22 @@ export default function Question() {
 
   async function onSubmit(e) {
     e.preventDefault();
-
-
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newQuestion = { ...form };
-
     await fetch("http://localhost:5000/question/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json" ,
       },
-     //
       body: JSON.stringify(newQuestion),
-
     })
-
     .catch(error => {
       window.alert(error);
       return;
     });
-
     setForm({ question: "", likes:""});
     navigate("/");
   }
-
-  async function getQuestions(){
-
-    const response = await fetch(`http://localhost:5000/question`);
-
-       if (!response.ok) {
-         const message = `An error occurred: ${response.statusText}`;
-         window.alert(message);
-         return;
-       }
-
-       const questions = await response.json();
-
-
-     }
-
-
 
   return (
     <div className='question-div'>
@@ -79,8 +52,7 @@ export default function Question() {
         </form>
         </div>
         <div className='questions-asked'>
-          <h1>Previously Asked Question(s)</h1>
-
+          <Link to="/asked_questions">Previously Asked Question(s)</Link>
 
         </div>
     </div>
