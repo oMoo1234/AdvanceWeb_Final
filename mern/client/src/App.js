@@ -10,6 +10,7 @@ import Edit from "./components/edit";
 import Create from "./components/create";
 import Question from "./components/question";
 import AskedQuestions from "./components/askedquestions";
+import Reply from "./components/reply";
 
 
 
@@ -25,6 +26,8 @@ const App = () => {
        <Route path="/create" element={<Create />} />
        <Route path="/" element={<Question />} />
        <Route path="/asked_questions" element={<AskedQuestions />} />
+       <Route path="/reply" element={<Reply />} />
+
 
      </Routes>
    </div>
